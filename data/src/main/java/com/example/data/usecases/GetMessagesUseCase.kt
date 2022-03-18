@@ -1,8 +1,8 @@
 package com.example.data.usecases
 
-import com.google.firebase.firestore.DocumentSnapshot
+import com.example.data.database.model.MessageEntity
 import kotlinx.coroutines.flow.Flow
 
 interface GetMessagesUseCase {
-    operator fun invoke(last: DocumentSnapshot?): Flow<List<DocumentSnapshot>>
+    operator fun invoke(last: String?): Flow<List<MessageEntity>>
 }
